@@ -2,9 +2,20 @@ img {
     width: 50px;
 }
 
+.verticalImg {
+    padding-bottom: 11px;
+}
+
 .topFlagDiv {
     display: grid;
-    grid-template-columns: repeat(13, auto);
+    grid-template-columns: repeat(13, 60px);
     grid-template-rows: auto;
+    text-align: center;
+}
+
+.leftFlagDiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, auto);
     text-align: center;
 }

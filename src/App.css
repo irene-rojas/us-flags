@@ -5,7 +5,8 @@
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(15, 1fr);
+  grid-template-rows: 50px repeat(15, 55px);
+  grid-row-gap: 10px;
 }
 
 .mapDiv {
@@ -16,5 +17,14 @@
 
 .topDiv {
     grid-row: 2/3;
-    grid-column: 2/span 13;
+    grid-column: 3/span 13;
+    display: grid;
+    grid-template-columns: repeat(13, 55px);
+    grid-column-gap: 10px;
+}
+
+.leftDiv {
+    grid-row: 3/span 12;
+    grid-column: 2/3;
+
 }
