@@ -18,6 +18,9 @@
 .topDiv {
     grid-row: 2/3;
     grid-column: 3/span 13;
+    display: grid;
+    grid-template-columns: repeat(13, 55px);
+    grid-column-gap: 10px;
 }
 
 .leftDiv {
