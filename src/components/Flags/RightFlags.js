@@ -1,7 +1,3 @@
 import React from "react";
 
-
-
-
-
-export default Flags;
+export default RightFlags;
