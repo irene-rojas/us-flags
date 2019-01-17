@@ -7,7 +7,8 @@ class App extends Component {
     return (
       <div className="App">
 
-        <Map size="small"/>
+        <Map />
+        {/* 0.6183 */}
 
       </div>
     );

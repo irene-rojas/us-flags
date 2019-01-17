@@ -5,3 +5,8 @@
 path:hover {
     fill: lightblue;
 }
+
+
+svg {
+    transform: scale(.60);
+}
