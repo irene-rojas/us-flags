@@ -1,4 +1,7 @@
-#AK:hover {
-    fill: red;
+.state {
+    fill: gray;
 }
 
+path:hover {
+    fill: lightblue;
+}
