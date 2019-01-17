@@ -8,7 +8,9 @@ class App extends Component {
     return (
       <div className="App">
 
-        <TopFlags />
+        <div className="topDiv">
+            <TopFlags />
+        </div>
 
         <div className="mapDiv">
             <Map />
