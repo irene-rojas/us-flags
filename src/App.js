@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from "./components/Map/Map.js";
 import TopFlags from "./components/Flags/TopFlags";
+import LeftFlags from "./components/Flags/LeftFlags";
 
 class App extends Component {
   render() {
@@ -10,6 +11,10 @@ class App extends Component {
 
         <div className="topDiv">
             <TopFlags />
+        </div>
+
+        <div className="leftDiv">
+            <LeftFlags />
         </div>
 
         <div className="mapDiv">
