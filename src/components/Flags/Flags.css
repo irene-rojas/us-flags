@@ -1,14 +1,18 @@
 img {
-    width: 50px;
+    width: 60px;
 }
 
 .verticalImg {
-    padding-bottom: 11px;
+    margin-bottom: 5px;
+}
+
+.horizontalImg {
+    margin-right: 5px;
 }
 
 .topFlagDiv {
     display: grid;
-    grid-template-columns: repeat(13, 60px);
+    grid-template-columns: repeat(13, auto);
     grid-template-rows: auto;
     text-align: center;
 }
@@ -29,7 +33,7 @@ img {
 
 .bottomFlagDiv {
     display: grid;
-    grid-template-columns: repeat(13, 60px);
+    grid-template-columns: repeat(13, auto);
     grid-template-rows: auto;
     text-align: center;
 }

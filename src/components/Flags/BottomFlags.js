@@ -18,19 +18,19 @@ const BottomFlags = () => (
 
     <div className="bottomFlagDiv">
 
-        <img src={penn} alt="pennsylvania" id="penn" className="verticalImg"/>
-        <img src={rhode} alt="rhode island" id="rhode" className="verticalImg"/>
-        <img src={soCaro} alt="south carolina" id="soCaro" className="verticalImg"/>
-        <img src={soDak} alt="south dakota" id="soDak" className="verticalImg"/>
-        <img src={tenn} alt="tennessee" id="tenn" className="verticalImg"/>
-        <img src={texas} alt="texas" id="texas" className="verticalImg"/>
-        <img src={utah} alt="utah" id="utah" className="verticalImg"/>
-        <img src={vermont} alt="vermont" id="vermont" className="verticalImg"/>
-        <img src={virginia} alt="virginia" id="virginia" className="verticalImg"/>
-        <img src={wash} alt="wash" id="washington" className="verticalImg"/>
-        <img src={wva} alt="west virginia" id="wva" className="verticalImg"/>
-        <img src={wisc} alt="wisconsin" id="wisc" className="verticalImg"/>
-        <img src={wyoming} alt="wyoming" id="wyoming" className="verticalImg"/>
+        <img src={penn} alt="pennsylvania" id="penn" className="horizontalImg"/>
+        <img src={rhode} alt="rhode island" id="rhode" className="horizontalImg"/>
+        <img src={soCaro} alt="south carolina" id="soCaro" className="horizontalImg"/>
+        <img src={soDak} alt="south dakota" id="soDak" className="horizontalImg"/>
+        <img src={tenn} alt="tennessee" id="tenn" className="horizontalImg"/>
+        <img src={texas} alt="texas" id="texas" className="horizontalImg"/>
+        <img src={utah} alt="utah" id="utah" className="horizontalImg"/>
+        <img src={vermont} alt="vermont" id="vermont" className="horizontalImg"/>
+        <img src={virginia} alt="virginia" id="virginia" className="horizontalImg"/>
+        <img src={wash} alt="wash" id="washington" className="horizontalImg"/>
+        <img src={wva} alt="west virginia" id="wva" className="horizontalImg"/>
+        <img src={wisc} alt="wisconsin" id="wisc" className="horizontalImg"/>
+        <img src={wyoming} alt="wyoming" id="wyoming" className="horizontalImg"/>
 
     </div>
 

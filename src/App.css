@@ -17,7 +17,7 @@
 
 .topDiv {
     grid-row: 2/3;
-    grid-column: 4/span 13;
+    grid-column: 3/span 13;
     display: grid;
     grid-template-columns: repeat(13, 55px);
     grid-column-gap: 10px;
@@ -25,7 +25,7 @@
 
 .leftDiv {
     grid-row: 3/span 12;
-    grid-column: 3/4;
+    grid-column: 2/3;
 }
 
 .rightDiv {
@@ -35,8 +35,8 @@
 
 .bottomDiv {
     grid-row: 11/12;
-    grid-column: 4/span 13;
+    grid-column: 3/span 13;
     display: grid;
-    /* grid-template-columns: repeat(13, 55px); */
+    grid-template-columns: repeat(13, 55px);
     grid-column-gap: 10px;
 }
