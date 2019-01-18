@@ -8,26 +8,29 @@ import BottomFlags from "./components/Flags/BottomFlags";
 
 class App extends Component {
 
-
+    state = {
+        accurate: [],
+        beingDragged: false,
+    };
 
   render() {
     return (
       <div className="App">
 
         <div className="topDiv">
-            <TopFlags />
+            <TopFlags draggable="true" />
         </div>
 
         <div className="leftDiv">
-            <LeftFlags />
+            <LeftFlags draggable="true"/>
         </div>
 
         <div className="rightDiv">
-            <RightFlags />
+            <RightFlags draggable="true"/>
         </div>
 
         <div className="bottomDiv">
-            <BottomFlags />
+            <BottomFlags draggable="true"/>
         </div>
 
         <div className="mapDiv">
