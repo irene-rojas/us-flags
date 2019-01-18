@@ -17,6 +17,26 @@ const RightFlags = () => (
 
     <div className="rightFlagDiv">
 
+    <img src={montana} alt="montana" id="montana" className="verticalImg"/>
+    <img src={nebraska} alt="nebraska" id="nebraska" className="verticalImg"/>
+    <img src={nevada} alt="nevada" id="nevada" className="verticalImg"/>
+    <img src={newHamp} alt="new hampshire" id="newHamp" className="verticalImg"/>
+    <img src={newJersey} alt="new jersey" id="newJersey" className="verticalImg"/>
+    <img src={newMex} alt="new mexico" id="newMex" className="verticalImg"/>
+    <img src={newYork} alt="new york" id="newYork" className="verticalImg"/>
+    <img src={noCaro} alt="north carolina" id="noCaro" className="verticalImg"/>
+    <img src={noDak} alt="north dakota" id="noDak" className="verticalImg"/>
+    <img src={ohio} alt="ohio" id="ohio" className="verticalImg"/>
+    <img src={okla} alt="okla" id="oklahoma" className="verticalImg"/>
+    <img src={oregon} alt="oregon" id="oregon" className="verticalImg"/>
+
+
+
+
+
+
+
+
     </div>
 
 

@@ -3,6 +3,7 @@ import './App.css';
 import Map from "./components/Map/Map.js";
 import TopFlags from "./components/Flags/TopFlags";
 import LeftFlags from "./components/Flags/LeftFlags";
+import RightFlags from "./components/Flags/RightFlags";
 
 class App extends Component {
   render() {
@@ -15,6 +16,10 @@ class App extends Component {
 
         <div className="leftDiv">
             <LeftFlags />
+        </div>
+
+        <div className="rightDiv">
+            <RightFlags />
         </div>
 
         <div className="mapDiv">
