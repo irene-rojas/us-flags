@@ -30,15 +30,7 @@ const RightFlags = () => (
     <img src={okla} alt="okla" id="oklahoma" className="verticalImg"/>
     <img src={oregon} alt="oregon" id="oregon" className="verticalImg"/>
 
-
-
-
-
-
-
-
     </div>
-
 
 )
 

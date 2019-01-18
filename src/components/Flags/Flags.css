@@ -19,3 +19,17 @@ img {
     grid-template-rows: repeat(12, auto);
     text-align: center;
 }
+
+.rightFlagDiv {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, auto);
+    text-align: center;
+}
+
+.bottomFlagDiv {
+    display: grid;
+    grid-template-columns: repeat(13, 60px);
+    grid-template-rows: auto;
+    text-align: center;
+}

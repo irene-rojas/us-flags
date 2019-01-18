@@ -16,7 +16,7 @@ import "./Flags.css";
 
 const TopFlags = () => (
 
-    <>
+    <div className="topFlagDiv">
 
         <img src={alabama} alt="alabama" id="alabama"/>
         <img src={alaska} alt="alaska" id="alaska"/>
@@ -32,16 +32,9 @@ const TopFlags = () => (
         <img src={idaho} alt="idaho" id="idaho"/>
         <img src={illinois} alt="illinois" id="illinois"/>
 
-    </>
+    </div>
 
 )
-
-
-
-
-
-
-
 
 
 export default TopFlags;
