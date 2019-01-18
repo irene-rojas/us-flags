@@ -7,6 +7,9 @@ import RightFlags from "./components/Flags/RightFlags";
 import BottomFlags from "./components/Flags/BottomFlags";
 
 class App extends Component {
+
+
+
   render() {
     return (
       <div className="App">
