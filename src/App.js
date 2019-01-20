@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from "./components/Map/Map.js";
-import TopFlags from "./components/Flags/TopFlags";
-import LeftFlags from "./components/Flags/LeftFlags";
-import RightFlags from "./components/Flags/RightFlags";
-import BottomFlags from "./components/Flags/BottomFlags";
+// import Map from "./components/Map/Map.js";
+// import TopFlags from "./components/Flags/TopFlags";
+// import LeftFlags from "./components/Flags/LeftFlags";
+// import RightFlags from "./components/Flags/RightFlags";
+// import BottomFlags from "./components/Flags/BottomFlags";
 import AppDragDropDemo from './AppDragDropDemo';
 
 class App extends Component {
