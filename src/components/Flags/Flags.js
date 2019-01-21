@@ -50,70 +50,80 @@ import wash from "./images/Washington.png";
 import wva from "./images/WestVirginia.png";
 import wisc from "./images/Wisconsin.png";
 import wyoming from "./images/Wyoming.png";
+import Flag from "../Flag/Flag";
 
 class Flags extends Component {
 
     state = {
         flags: [
-            {name: "alaska", src: alaska, id: "AK", guess: "wrong"},
-            {name: "hawaii", src: hawaii, id: "HI", guess: "wrong"},
-            {name: "alabama", src: alabama, id: "AL", guess: "wrong"},
-            {name: "arkansas", src: arkansas, id: "AK", guess: "wrong"},
-            {name: "arizona", src: arizona, id: "AZ", guess: "wrong"},
-            {name: "california", src: california, id: "CA", guess: "wrong"},
-            {name: "colorado", src: colorado, id: "CO", guess: "wrong"},
-            {name: "connecticut", src: connecticut, id: "CT", guess: "wrong"},
-            {name: "delaware", src: delaware, id: "DE", guess: "wrong"},
-            {name: "florida", src: florida, id: "FL", guess: "wrong"},
-            {name: "georgia", src: georgia, id: "GA", guess: "wrong"},
-            {name: "iowa", src: iowa, id: "IA", guess: "wrong"},
-            {name: "idaho", src: idaho, id: "ID", guess: "wrong"},
-            {name: "illinois", src: illinois, id: "IL", guess: "wrong"},
-            {name: "indiana", src: indiana, id: "IN", guess: "wrong"},
-            {name: "kansas", src: kansas, id: "KS", guess: "wrong"},
-            {name: "kentucky", src: kentucky, id: "KY", guess: "wrong"},
-            {name: "louisiana", src: louisiana, id: "LA", guess: "wrong"},
-            {name: "mass", src: mass, id: "MA", guess: "wrong"},
-            {name: "maryland", src: maryland, id: "MD", guess: "wrong"},
-            {name: "maine", src: maine, id: "ME", guess: "wrong"},
-            {name: "michigan", src: michigan, id: "MI", guess: "wrong"},
-            {name: "minn", src: minn, id: "MN", guess: "wrong"},
-            {name: "missouri", src: missouri, id: "MO", guess: "wrong"},
-            {name: "miss", src: miss, id: "MS", guess: "wrong"},
-            {name: "montana", src: montana, id: "MT", guess: "wrong"},
-            {name: "noCaro", src: noCaro, id: "NC", guess: "wrong"},
-            {name: "noDak", src: noDak, id: "ND", guess: "wrong"},
-            {name: "nebraska", src: nebraska, id: "NE", guess: "wrong"},
-            {name: "newHamp", src: newHamp, id: "NH", guess: "wrong"},
-            {name: "newJersey", src: newJersey, id: "NJ", guess: "wrong"},
-            {name: "newMex", src: newMex, id: "NM", guess: "wrong"},
-            {name: "nevada", src: nevada, id: "NV", guess: "wrong"},
-            {name: "newYork", src: newYork, id: "NY", guess: "wrong"},
-            {name: "ohio", src: ohio, id: "OH", guess: "wrong"},
-            {name: "okla", src: okla, id: "OK", guess: "wrong"},
-            {name: "oregon", src: oregon, id: "OR", guess: "wrong"},
-            {name: "penn", src: penn, id: "PA", guess: "wrong"},
-            {name: "rhode", src: rhode, id: "RI", guess: "wrong"},
-            {name: "soCaro", src: soCaro, id: "SC", guess: "wrong"},
-            {name: "soDak", src: soDak, id: "SD", guess: "wrong"},
-            {name: "tenn", src: tenn, id: "TN", guess: "wrong"},
-            {name: "texas", src: texas, id: "TX", guess: "wrong"},
-            {name: "utah", src: utah, id: "UT", guess: "wrong"},
-            {name: "virginia", src: virginia, id: "VA", guess: "wrong"},
-            {name: "vermont", src: vermont, id: "VT", guess: "wrong"},
-            {name: "wash", src: wash, id: "WA", guess: "wrong"},
-            {name: "wisc", src: wisc, id: "WI", guess: "wrong"},
-            {name: "wva", src: wva, id: "WV", guess: "wrong"},
-            {name: "wyoming", src: wyoming, id: "WY", guess: "wrong"},
+            {name: "alaska", src: alaska, id: "AK"},
+            {name: "hawaii", src: hawaii, id: "HI"},
+            {name: "alabama", src: alabama, id: "AL"},
+            {name: "arkansas", src: arkansas, id: "AK"},
+            {name: "arizona", src: arizona, id: "AZ"},
+            {name: "california", src: california, id: "CA"},
+            {name: "colorado", src: colorado, id: "CO"},
+            {name: "connecticut", src: connecticut, id: "CT"},
+            {name: "delaware", src: delaware, id: "DE"},
+            {name: "florida", src: florida, id: "FL"},
+            {name: "georgia", src: georgia, id: "GA"},
+            {name: "iowa", src: iowa, id: "IA"},
+            {name: "idaho", src: idaho, id: "ID"},
+            {name: "illinois", src: illinois, id: "IL"},
+            {name: "indiana", src: indiana, id: "IN"},
+            {name: "kansas", src: kansas, id: "KS"},
+            {name: "kentucky", src: kentucky, id: "KY"},
+            {name: "louisiana", src: louisiana, id: "LA"},
+            {name: "mass", src: mass, id: "MA"},
+            {name: "maryland", src: maryland, id: "MD"},
+            {name: "maine", src: maine, id: "ME"},
+            {name: "michigan", src: michigan, id: "MI"},
+            {name: "minn", src: minn, id: "MN"},
+            {name: "missouri", src: missouri, id: "MO"},
+            {name: "miss", src: miss, id: "MS"},
+            {name: "montana", src: montana, id: "MT"},
+            {name: "noCaro", src: noCaro, id: "NC"},
+            {name: "noDak", src: noDak, id: "ND"},
+            {name: "nebraska", src: nebraska, id: "NE"},
+            {name: "newHamp", src: newHamp, id: "NH"},
+            {name: "newJersey", src: newJersey, id: "NJ"},
+            {name: "newMex", src: newMex, id: "NM"},
+            {name: "nevada", src: nevada, id: "NV"},
+            {name: "newYork", src: newYork, id: "NY"},
+            {name: "ohio", src: ohio, id: "OH"},
+            {name: "okla", src: okla, id: "OK"},
+            {name: "oregon", src: oregon, id: "OR"},
+            {name: "penn", src: penn, id: "PA"},
+            {name: "rhode", src: rhode, id: "RI"},
+            {name: "soCaro", src: soCaro, id: "SC"},
+            {name: "soDak", src: soDak, id: "SD"},
+            {name: "tenn", src: tenn, id: "TN"},
+            {name: "texas", src: texas, id: "TX"},
+            {name: "utah", src: utah, id: "UT"},
+            {name: "virginia", src: virginia, id: "VA"},
+            {name: "vermont", src: vermont, id: "VT"},
+            {name: "wash", src: wash, id: "WA"},
+            {name: "wisc", src: wisc, id: "WI"},
+            {name: "wva", src: wva, id: "WV"},
+            {name: "wyoming", src: wyoming, id: "WY"},
         ]
-    }
-
+    };
 
     render() {
 
         return (
 
             <div>
+                {this.state.flags.forEach(flag => {
+                    return (
+                        <Flag 
+                            key={flag.id}
+                            src={flag.src}
+                            alt={flag.name}
+                        />
+                    )
+                })}
+
 
             </div>
 
