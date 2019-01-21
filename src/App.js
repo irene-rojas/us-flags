@@ -7,8 +7,9 @@ class App extends Component {
 
     onclick = (event) => {
         event.preventDefault();
-        const SVG = document.getAttribute({Map});
-        console.log(SVG);
+        // const Map = event.target;
+        // let SVG = Map.getElementById("id");
+        console.log(Map);
     }
 
 
@@ -25,8 +26,10 @@ class App extends Component {
         </div>
 
         <div className="mapDiv">
-            <Map onClick={this.onClick}/>
+            <Map onClick={this.onClick} />
         </div>
+
+
 
       </div>
     );
