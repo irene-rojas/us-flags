@@ -5,10 +5,7 @@ import Flags from "./components/Flags/Flags";
 
 class App extends Component {
 
-    state = {
-        accurate: [],
-        beingDragged: false,
-    };
+
 
   render() {
     return (
@@ -24,6 +21,7 @@ class App extends Component {
 
         <div className="flagsDiv">
             <Flags />
+            {/* need to display one random flag */}
         </div>
 
       </div>

@@ -59,7 +59,7 @@ class Flags extends Component {
             {name: "alaska", src: alaska, id: "AK"},
             {name: "hawaii", src: hawaii, id: "HI"},
             {name: "alabama", src: alabama, id: "AL"},
-            {name: "arkansas", src: arkansas, id: "AK"},
+            {name: "arkansas", src: arkansas, id: "AR"},
             {name: "arizona", src: arizona, id: "AZ"},
             {name: "california", src: california, id: "CA"},
             {name: "colorado", src: colorado, id: "CO"},
@@ -109,12 +109,13 @@ class Flags extends Component {
         ]
     };
 
-    render() {
+    
 
+    render() {
         return (
 
             <div>
-                {this.state.flags.forEach(flag => {
+                {this.state.flags.map(flag => {
                     return (
                         <Flag 
                             key={flag.id}
@@ -123,7 +124,6 @@ class Flags extends Component {
                         />
                     )
                 })}
-
 
             </div>
 
