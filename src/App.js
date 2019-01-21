@@ -5,6 +5,11 @@ import Flags from "./components/Flags/Flags";
 
 class App extends Component {
 
+    onclick = (event) => {
+        event.preventDefault();
+        const SVG = document.getAttribute({Map});
+        console.log(SVG);
+    }
 
 
   render() {
@@ -20,7 +25,7 @@ class App extends Component {
         </div>
 
         <div className="mapDiv">
-            <Map />
+            <Map onClick={this.onClick}/>
         </div>
 
       </div>
