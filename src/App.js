@@ -11,17 +11,16 @@ class App extends Component {
     return (
       <div className="App">
 
-          <div className="header">
-              Match the Flag
-          </div>
-
-        <div className="mapDiv">
-            <Map />
+        <div className="header">
+            Match the Flag
         </div>
 
         <div className="flagsDiv">
             <Flags />
-            {/* need to display one random flag */}
+        </div>
+
+        <div className="mapDiv">
+            <Map />
         </div>
 
       </div>

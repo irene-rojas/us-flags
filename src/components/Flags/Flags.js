@@ -50,7 +50,6 @@ import wash from "./images/Washington.png";
 import wva from "./images/WestVirginia.png";
 import wisc from "./images/Wisconsin.png";
 import wyoming from "./images/Wyoming.png";
-import Flag from "../Flag/Flag";
 
 class Flags extends Component {
 
@@ -107,36 +106,31 @@ class Flags extends Component {
             {name: "wva", src: wva, id: "WV"},
             {name: "wyoming", src: wyoming, id: "WY"},
         ],
-        currentFlag: "",
+        currentFlag: [
+            {name: "", src: "", id: ""}
+        ],
     };
 
-    targetFlag = () => {
-        let targetFlag = this.state.flags[Math.floor(Math.random()*this.state.flags.length)]
-        console.log(targetFlag);
-    }
-
     componentDidMount() {
-        this.setState({
-            currentFlag: this.targetFlag
-        })
+        let targetFlag = this.state.flags[Math.floor(Math.random()*this.state.flags.length)];
+            console.log(targetFlag);
+            this.setState({
+                name: targetFlag.name,
+                src: targetFlag.src,
+                id: targetFlag.id
+            });
+            console.log(targetFlag.name);
+            console.log(targetFlag.src);
+            console.log(targetFlag.id);
     }
-
 
     render() {
         return (
 
-            <div>
-                {this.state.flags.map(flag => {
-                    return (
-                        <Flag 
-                            key={flag.id}
-                            src={this.state.currentFlag}
-                            alt={flag.name}
-                        />
-                    )
-                })}
-
-            </div>
+            <img  
+                src={this.state.src} 
+                alt={this.state.id}
+            />
 
         )
     }
