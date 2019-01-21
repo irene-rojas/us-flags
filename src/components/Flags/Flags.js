@@ -106,10 +106,21 @@ class Flags extends Component {
             {name: "wisc", src: wisc, id: "WI"},
             {name: "wva", src: wva, id: "WV"},
             {name: "wyoming", src: wyoming, id: "WY"},
-        ]
+        ],
+        currentFlag: "",
     };
 
-    
+    targetFlag = () => {
+        let targetFlag = this.state.flags[Math.floor(Math.random()*this.state.flags.length)]
+        console.log(targetFlag);
+    }
+
+    componentDidMount() {
+        this.setState({
+            currentFlag: this.targetFlag
+        })
+    }
+
 
     render() {
         return (
@@ -119,7 +130,7 @@ class Flags extends Component {
                     return (
                         <Flag 
                             key={flag.id}
-                            src={flag.src}
+                            src={this.state.currentFlag}
                             alt={flag.name}
                         />
                     )
