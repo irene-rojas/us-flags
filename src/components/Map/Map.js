@@ -4,6 +4,7 @@ import "./Map.css";
 const Map = () => (
 
 <div className="svgDiv">
+    {/* 0.6183 */}
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" preserveAspectRatio="xMinYMin meet">
 <g id="outlines" className="state">

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Map from "./components/Map/Map.js";
-import TopFlags from "./components/Flags/TopFlags";
-import LeftFlags from "./components/Flags/LeftFlags";
-import RightFlags from "./components/Flags/RightFlags";
-import BottomFlags from "./components/Flags/BottomFlags";
-import AppDragDropDemo from './AppDragDropDemo';
+// import TopFlags from "./components/Flags/TopFlags";
+// import LeftFlags from "./components/Flags/LeftFlags";
+// import RightFlags from "./components/Flags/RightFlags";
+// import BottomFlags from "./components/Flags/BottomFlags";
+// import AppDragDropDemo from './AppDragDropDemo';
+import Flags from "./components/Flags/Flags";
 
 class App extends Component {
 
@@ -18,29 +19,12 @@ class App extends Component {
     return (
       <div className="App">
 
-        <div className="topDiv">
-            <TopFlags draggable="true" />
-        </div>
-
-        <div className="leftDiv">
-            <LeftFlags draggable="true"/>
-        </div>
-
-        <div className="rightDiv">
-            <RightFlags draggable="true"/>
-        </div>
-
-        <div className="bottomDiv">
-            <BottomFlags draggable="true"/>
-        </div>
-
         <div className="mapDiv">
             <Map />
-            {/* 0.6183 */}
         </div>
 
-        <div className="containerDrag">
-            <AppDragDropDemo />
+        <div className="flagsDiv">
+            <Flags />
         </div>
 
       </div>
