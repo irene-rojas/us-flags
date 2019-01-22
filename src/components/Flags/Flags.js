@@ -121,8 +121,12 @@ class Flags extends Component {
             });
             // console.log(targetFlag.name);
             // console.log(targetFlag.src);
-            // console.log(targetFlag.id);
+            console.log(`Flags.js: ${targetFlag.id}`);
     }
+
+    handleChange = (targetFlag) => {
+        this.props.handleClickInParent(targetFlag);
+      }
 
     render() {
         return (

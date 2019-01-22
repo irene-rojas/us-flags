@@ -3,7 +3,9 @@ import "./Map.css";
 
 // do you need a click handler/recognizer here?
 
-const SVGMap = () => (
+const SVGMap = (props) => (
+
+<div className="svgDiv" onClick={props.onClick}>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650" preserveAspectRatio="xMinYMin meet">
 <g id="outlines" className="state">
@@ -59,7 +61,7 @@ const SVGMap = () => (
   <path id="WY" d="M353 161.9l-1.5 25.4-4.4 44-2.7-.3-83.3-9.1-27.9-3 2-12 6.9-41 3.8-24.2 1.3-11.2 48.2 7 59.1 6.5z"/>
 </g>
 </svg>
-
+</div>
 );
 
 
