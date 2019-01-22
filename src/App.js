@@ -9,7 +9,7 @@ class App extends Component {
 
     onclick = (event) => {
         event.preventDefault();
-
+        console.log("hi");
     }
 
 
