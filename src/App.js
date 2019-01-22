@@ -7,11 +7,30 @@ import Flags from "./components/Flags/Flags";
 
 class App extends Component {
 
+    state = {
+        correct: 0,
+        wrong: 0,
+    }
+
     onClick = (event) => {
         event.preventDefault();
         let clickedElement = event.target.id;
-        console.log(clickedElement);
+        console.log(clickedElement);        
     }
+
+    callbackHandlerFunction = ( targetFlag ) => {
+        const targetState = targetFlag.id;
+        if (targetState === true) {
+            this.setState({correct: this.state.correct + 1}, () => {
+                console.log("correct");
+            });
+        };
+        if (targetState === false) {
+            this.setState({wrong: this.state.wrong + 1}, () => {
+                console.log("wrong");
+            });
+        };
+      } 
 
 
   render() {
@@ -27,7 +46,16 @@ class App extends Component {
         </div>
 
         <div className="mapDiv">
-            <SVGMap onClick={this.onClick}/>
+            <SVGMap 
+            onClick={this.onClick}
+            handleClickInParent={this.callbackHandlerFunction}
+            />
+        </div>
+
+        <div className="scoreDiv">
+            Correct: {this.state.correct}
+            <br></br>
+            Wrong: {this.state.wrong}
         </div>
 
       </div>
