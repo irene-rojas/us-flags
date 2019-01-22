@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import SVGMap from "./components/Map/Map.js";
 import Flags from "./components/Flags/Flags";
-// import statesMap from "./components/Map/Map_USA_blank.svg";
+// import SVGMap from "./components/Map/Map_USA_blank.svg";
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
       <div className="App">
 
         <div className="header">
-            Match the Flag
+            <h1>Match the Flag</h1>
         </div>
 
         <div className="flagsDiv">
