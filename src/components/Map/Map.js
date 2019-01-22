@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Map.css";
 
-const Map = () => (
+const SVGMap = () => (
     
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 650" preserveAspectRatio="xMinYMin meet">
 <g id="outlines" className="state">
@@ -58,10 +58,7 @@ const Map = () => (
 </g>
 </svg>
 
-
 );
 
 
-
-
-export default Map;
+export default SVGMap;
