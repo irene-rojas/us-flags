@@ -9,7 +9,7 @@ class App extends Component {
 
     onClick = (event) => {
         event.preventDefault();
-        let clickedElement = event.target;
+        let clickedElement = event.target.id;
         console.log(clickedElement);
     }
 
