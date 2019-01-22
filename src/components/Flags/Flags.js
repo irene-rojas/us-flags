@@ -106,7 +106,7 @@ class Flags extends Component {
             {name: "wva", src: wva, id: "WV"},
             {name: "wyoming", src: wyoming, id: "WY"},
         ],
-        currentFlag: [
+        targetFlag: [
             {name: "", src: "", id: ""}
         ],
     };
@@ -121,7 +121,7 @@ class Flags extends Component {
             });
             // console.log(targetFlag.name);
             // console.log(targetFlag.src);
-            console.log(`Flags.js: ${targetFlag.id}`);
+            // console.log(`Flags.js: ${targetFlag.id}`);
     }
 
     handleChange = (targetFlag) => {
@@ -131,10 +131,14 @@ class Flags extends Component {
     render() {
         return (
 
+        <div>
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
             />
+            <br></br>
+            {this.state.name}
+        </div>
 
         )
     }
