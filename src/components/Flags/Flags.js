@@ -121,7 +121,7 @@ class Flags extends Component {
             });
             // console.log(targetFlag.name);
             // console.log(targetFlag.src);
-            console.log(targetFlag.id);
+            console.log(`Flags.js: ${targetFlag.id}`);
     }
 
     handleChange = (targetFlag) => {
@@ -134,7 +134,6 @@ class Flags extends Component {
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
-                onChange={this.handleChange}
             />
 
         )

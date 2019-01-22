@@ -10,22 +10,27 @@ class App extends Component {
     state = {
         correct: 0,
         wrong: 0,
+        targetState: "",
+        selectedState: ""
     }
 
     onClick = (event) => {
         event.preventDefault();
         let clickedElement = event.target.id;
-        console.log(clickedElement);        
+        // console.log(clickedElement);
+        this.setState({
+            selectedState: clickedElement
+        });        
     }
 
     callbackHandlerFunction = ( targetFlag ) => {
         const targetState = targetFlag.id;
-        if (targetState === true) {
+        if (targetState === this.state.selectedState) {
             this.setState({correct: this.state.correct + 1}, () => {
                 console.log("correct");
             });
         };
-        if (targetState === false) {
+        if (!targetState === this.state.selectedState) {
             this.setState({wrong: this.state.wrong + 1}, () => {
                 console.log("wrong");
             });
@@ -56,6 +61,10 @@ class App extends Component {
             Correct: {this.state.correct}
             <br></br>
             Wrong: {this.state.wrong}
+            <br></br>
+            Target State: {this.state.targetState}
+            <br></br>
+            Selected State: {this.state.selectedState}
         </div>
 
       </div>
