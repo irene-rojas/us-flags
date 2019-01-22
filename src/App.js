@@ -7,9 +7,10 @@ import Flags from "./components/Flags/Flags";
 
 class App extends Component {
 
-    onclick = (event) => {
+    onClick = (event) => {
         event.preventDefault();
-        console.log("hi");
+        let clickedElement = event.target;
+        console.log(clickedElement);
     }
 
 
@@ -26,7 +27,7 @@ class App extends Component {
         </div>
 
         <div className="mapDiv">
-            <SVGMap onClick={this.onClick} />
+            <SVGMap onClick={this.onClick}/>
         </div>
 
       </div>
