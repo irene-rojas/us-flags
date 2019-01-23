@@ -16,30 +16,28 @@ class App extends Component {
 
     onClick = (event) => {
         event.preventDefault();
-        let clickedElement = event.target.id;
-        // console.log(clickedElement);
+        let clickedState = event.target.id;
         this.setState({
-            selectedState: clickedElement
+            selectedState: clickedState
         });  
         // if (targetState === this.state.selectedState) {
         //     this.setState({correct: this.state.correct + 1}, () => {
         //         console.log("correct");
         //     });
         // };
-        // if (!targetState === this.state.selectedState) {
+        // if (targetState === !this.state.selectedState) {
         //     this.setState({wrong: this.state.wrong + 1}, () => {
         //         console.log("wrong");
         //     });
         // };
     }
 
-    setTargetFlag = ( targetFlag ) => {
+    setTargetFlagApp = ( targetFlag ) => {
         const targetState = targetFlag.id;
         this.setState({
             targetFlag: targetState
         });
-        this.props.handleInParent({targetFlag});      
-        console.log(`App.js: ${targetState}`)
+        console.log(`App.js: ${this.state.targetFlag}`)
       } 
 
 
@@ -53,7 +51,7 @@ class App extends Component {
 
         <div className="flagsDiv">
             <Flags 
-                setTargetFlag={this.setTargetFlag}
+                setTargetFlag={this.setTargetFlagApp}
             />
         </div>
 

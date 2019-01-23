@@ -123,7 +123,7 @@ class Flags extends Component {
     }
 
     sendTargetFlag = (targetFlag) => {
-        this.props.handleInParent(targetFlag);
+        this.props.setTargetFlag(targetFlag);
       }
 
     render() {
@@ -133,6 +133,7 @@ class Flags extends Component {
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
+                onLoad={this.sendTargetFlag}
             />
             <br></br>
             {this.state.name}
