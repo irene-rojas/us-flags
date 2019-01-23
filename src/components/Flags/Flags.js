@@ -124,9 +124,9 @@ class Flags extends Component {
             // console.log(`Flags.js: ${targetFlag.id}`);
     }
 
-    handleChange = (targetFlag) => {
-        this.props.handleClickInParent(targetFlag);
-      }
+    // handleChange = (targetFlag) => {
+    //     this.props.handleClickInParent(targetFlag);
+    //   }
 
     render() {
         return (
@@ -135,6 +135,7 @@ class Flags extends Component {
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
+                value={this.props.data(this.state.targetFlag)}
             />
             <br></br>
             {this.state.name}

@@ -23,24 +23,33 @@ class App extends Component {
         });        
     }
 
-    callbackHandlerFunction = ( targetFlag ) => {
-        const targetState = targetFlag.id;
-        this.setState({
-            targetFlag: targetState
-        });
-        console.log(`App.js: ${targetState}`)
-        if (targetState === this.state.selectedState) {
-            this.setState({correct: this.state.correct + 1}, () => {
-                console.log("correct");
+    setTargetFlag(targetFlag) {
+        return () => {
+            this.setState({
+                targetFlag: targetFlag
             });
-        };
-        if (!targetState === this.state.selectedState) {
-            this.setState({wrong: this.state.wrong + 1}, () => {
-                console.log("wrong");
-            });
-        };
-        this.props.handleClickInParent({targetFlag});
-      } 
+        }
+    }
+
+
+    // callbackHandlerFunction = ( targetFlag ) => {
+    //     const targetState = targetFlag.id;
+    //     this.setState({
+    //         targetFlag: targetState
+    //     });
+    //     console.log(`App.js: ${targetState}`)
+    //     if (targetState === this.state.selectedState) {
+    //         this.setState({correct: this.state.correct + 1}, () => {
+    //             console.log("correct");
+    //         });
+    //     };
+    //     if (!targetState === this.state.selectedState) {
+    //         this.setState({wrong: this.state.wrong + 1}, () => {
+    //             console.log("wrong");
+    //         });
+    //     };
+    //     this.props.handleClickInParent({targetFlag});
+    //   } 
 
 
   render() {
@@ -52,13 +61,12 @@ class App extends Component {
         </div>
 
         <div className="flagsDiv">
-            <Flags />
+            <Flags data={this.setTargetFlag.bind(this)}/>
         </div>
 
         <div className="mapDiv">
             <SVGMap 
             onClick={this.onClick}
-            handleClickInParent={this.callbackHandlerFunction}
             />
         </div>
 
