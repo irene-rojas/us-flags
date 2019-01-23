@@ -28,3 +28,11 @@
     margin-top: 10px;
 }
 
+.scoreDiv {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black;
+}
+
+
+/* <a href='https://www.freepik.com/free-vector/travel-background-in-realistic-style_1919861.htm'>Designed by Freepik</a> */

@@ -1,5 +1,7 @@
 .state {
     fill: gray;
+    background-color: black;
+    filter: invert(100%);
 }
 
 path:hover {

@@ -28,7 +28,7 @@ class App extends Component {
         this.setState({
             targetFlag: targetState
         });
-        console.log(`App.js: ${targetFlag}`)
+        console.log(`App.js: ${targetState}`)
         if (targetState === this.state.selectedState) {
             this.setState({correct: this.state.correct + 1}, () => {
                 console.log("correct");

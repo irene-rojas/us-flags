@@ -137,7 +137,7 @@ class Flags extends Component {
                 alt={this.state.id}
             />
             <br></br>
-            {this.state.name}
+            {this.state.id}
         </div>
 
         )
