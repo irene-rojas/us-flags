@@ -18,7 +18,7 @@
     grid-column: 2/3;
     grid-row: 2/3;
     margin: 10px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 .mapDiv {
@@ -31,7 +31,7 @@
 .scoreDiv {
     grid-column: 1/2;
     grid-row: 2/3;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 
