@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import SVGMap from "./components/Map/Map.js";
 import Flags from "./components/Flags/Flags";
-// import SVGMap from "./components/Map/Map_USA_blank.svg";
 
 
 class App extends Component {
@@ -16,30 +15,30 @@ class App extends Component {
 
     onClick = (event) => {
         event.preventDefault();
-        let clickedElement = event.target.id;
-        // console.log(clickedElement);
+        let clickedState = event.target.id;
         this.setState({
-            selectedState: clickedElement
-        });        
+            selectedState: clickedState
+        });  
+        if (clickedState === this.state.selectedState) {
+            this.setState({correct: this.state.correct + 1}, () => {
+                console.log("correct");
+                this.setTargetFlagApp();
+            });
+        };
+        if (clickedState === !this.state.selectedState) {
+            this.setState({wrong: this.state.wrong + 1}, () => {
+                console.log("wrong");
+                this.setTargetFlagApp();
+            });
+        }
     }
 
-    callbackHandlerFunction = ( targetFlag ) => {
+    setTargetFlagApp = (targetFlag) => {
         const targetState = targetFlag.id;
         this.setState({
             targetFlag: targetState
         });
-        console.log(`App.js: ${targetState}`)
-        if (targetState === this.state.selectedState) {
-            this.setState({correct: this.state.correct + 1}, () => {
-                console.log("correct");
-            });
-        };
-        if (!targetState === this.state.selectedState) {
-            this.setState({wrong: this.state.wrong + 1}, () => {
-                console.log("wrong");
-            });
-        };
-        this.props.handleClickInParent({targetFlag});
+        console.log(`App.js: ${this.state.targetFlag}`)
       } 
 
 
@@ -52,13 +51,14 @@ class App extends Component {
         </div>
 
         <div className="flagsDiv">
-            <Flags />
+            <Flags 
+                setTargetFlag={this.setTargetFlagApp}
+            />
         </div>
 
         <div className="mapDiv">
             <SVGMap 
-            onClick={this.onClick}
-            handleClickInParent={this.callbackHandlerFunction}
+                onClick={this.onClick}
             />
         </div>
 

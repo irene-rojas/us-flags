@@ -113,21 +113,19 @@ class Flags extends Component {
 
     componentDidMount() {
         let targetFlag = this.state.flags[Math.floor(Math.random()*this.state.flags.length)];
-            // console.log(targetFlag);
             this.setState({
                 name: targetFlag.name,
                 src: targetFlag.src,
                 id: targetFlag.id
             });
-            // console.log(targetFlag.name);
-            // console.log(targetFlag.src);
-            // console.log(`Flags.js: ${targetFlag.id}`);
+            // console.log(`Flags.js: ${targetFlag.name}`);
     }
 
-    handleChange = (targetFlag) => {
-        this.props.handleClickInParent(targetFlag);
+    sendTargetFlag = (targetFlag) => {
+        this.props.setTargetFlag(targetFlag);
       }
 
+      
     render() {
         return (
 
@@ -135,6 +133,7 @@ class Flags extends Component {
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
+                onLoad={this.sendTargetFlag}
             />
             <br></br>
             {this.state.name}
