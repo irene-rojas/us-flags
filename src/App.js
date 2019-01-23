@@ -20,36 +20,27 @@ class App extends Component {
         // console.log(clickedElement);
         this.setState({
             selectedState: clickedElement
-        });        
+        });  
+        // if (targetState === this.state.selectedState) {
+        //     this.setState({correct: this.state.correct + 1}, () => {
+        //         console.log("correct");
+        //     });
+        // };
+        // if (!targetState === this.state.selectedState) {
+        //     this.setState({wrong: this.state.wrong + 1}, () => {
+        //         console.log("wrong");
+        //     });
+        // };
     }
 
-    setTargetFlag(targetFlag) {
-        return () => {
-            this.setState({
-                targetFlag: targetFlag
-            });
-        }
-    }
-
-
-    // callbackHandlerFunction = ( targetFlag ) => {
-    //     const targetState = targetFlag.id;
-    //     this.setState({
-    //         targetFlag: targetState
-    //     });
-    //     console.log(`App.js: ${targetState}`)
-    //     if (targetState === this.state.selectedState) {
-    //         this.setState({correct: this.state.correct + 1}, () => {
-    //             console.log("correct");
-    //         });
-    //     };
-    //     if (!targetState === this.state.selectedState) {
-    //         this.setState({wrong: this.state.wrong + 1}, () => {
-    //             console.log("wrong");
-    //         });
-    //     };
-    //     this.props.handleClickInParent({targetFlag});
-    //   } 
+    setTargetFlag = ( targetFlag ) => {
+        const targetState = targetFlag.id;
+        this.setState({
+            targetFlag: targetState
+        });
+        this.props.handleInParent({targetFlag});      
+        console.log(`App.js: ${targetState}`)
+      } 
 
 
   render() {
@@ -61,12 +52,14 @@ class App extends Component {
         </div>
 
         <div className="flagsDiv">
-            <Flags data={this.setTargetFlag.bind(this)}/>
+            <Flags 
+                setTargetFlag={this.setTargetFlag}
+            />
         </div>
 
         <div className="mapDiv">
             <SVGMap 
-            onClick={this.onClick}
+                onClick={this.onClick}
             />
         </div>
 
