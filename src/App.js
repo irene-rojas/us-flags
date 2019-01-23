@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import SVGMap from "./components/Map/Map.js";
 import Flags from "./components/Flags/Flags";
-// import SVGMap from "./components/Map/Map_USA_blank.svg";
 
 
 class App extends Component {
@@ -20,19 +19,21 @@ class App extends Component {
         this.setState({
             selectedState: clickedState
         });  
-        // if (targetState === this.state.selectedState) {
-        //     this.setState({correct: this.state.correct + 1}, () => {
-        //         console.log("correct");
-        //     });
-        // };
-        // if (targetState === !this.state.selectedState) {
-        //     this.setState({wrong: this.state.wrong + 1}, () => {
-        //         console.log("wrong");
-        //     });
-        // };
+        if (clickedState === this.state.selectedState) {
+            this.setState({correct: this.state.correct + 1}, () => {
+                console.log("correct");
+                this.setTargetFlagApp();
+            });
+        };
+        if (clickedState === !this.state.selectedState) {
+            this.setState({wrong: this.state.wrong + 1}, () => {
+                console.log("wrong");
+                this.setTargetFlagApp();
+            });
+        }
     }
 
-    setTargetFlagApp = ( targetFlag ) => {
+    setTargetFlagApp = (targetFlag) => {
         const targetState = targetFlag.id;
         this.setState({
             targetFlag: targetState

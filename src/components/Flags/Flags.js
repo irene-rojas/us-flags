@@ -113,7 +113,6 @@ class Flags extends Component {
 
     componentDidMount() {
         let targetFlag = this.state.flags[Math.floor(Math.random()*this.state.flags.length)];
-            // console.log(targetFlag);
             this.setState({
                 name: targetFlag.name,
                 src: targetFlag.src,
@@ -126,6 +125,7 @@ class Flags extends Component {
         this.props.setTargetFlag(targetFlag);
       }
 
+      
     render() {
         return (
 
