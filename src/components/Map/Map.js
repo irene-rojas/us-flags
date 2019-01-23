@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Map.css";
 
-// do you need a click handler/recognizer here?
 
 const SVGMap = (props) => (
 

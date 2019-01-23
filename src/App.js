@@ -10,7 +10,7 @@ class App extends Component {
     state = {
         correct: 0,
         wrong: 0,
-        targetState: "",
+        targetFlag: "",
         selectedState: ""
     }
 
@@ -25,6 +25,10 @@ class App extends Component {
 
     callbackHandlerFunction = ( targetFlag ) => {
         const targetState = targetFlag.id;
+        this.setState({
+            targetFlag: targetState
+        });
+        console.log(`App.js: ${targetState}`)
         if (targetState === this.state.selectedState) {
             this.setState({correct: this.state.correct + 1}, () => {
                 console.log("correct");
@@ -35,6 +39,7 @@ class App extends Component {
                 console.log("wrong");
             });
         };
+        this.props.handleClickInParent({targetFlag});
       } 
 
 
@@ -62,7 +67,7 @@ class App extends Component {
             <br></br>
             Wrong: {this.state.wrong}
             <br></br>
-            Target State: {this.state.targetState}
+            Target State: {this.state.targetFlag}
             <br></br>
             Selected State: {this.state.selectedState}
         </div>
