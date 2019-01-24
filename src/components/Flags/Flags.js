@@ -143,5 +143,4 @@ class Flags extends Component {
     }
 }
 
-
 export default Flags;
