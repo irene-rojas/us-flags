@@ -22,22 +22,23 @@ class App extends Component {
         if (clickedState === this.state.selectedState) {
             this.setState({correct: this.state.correct + 1}, () => {
                 console.log("correct");
-                this.getFlag();
             });
+            this.getFlag();
         };
         if (clickedState === !this.state.selectedState) {
             this.setState({wrong: this.state.wrong + 1}, () => {
                 console.log("wrong");
-                this.getFlag();
             });
+            this.getFlag();
         }
     }
 
     getFlag = (targetFlag) => {
         this.setState({
-            targetFlag: targetFlag.id
+            targetFlag: targetFlag.target.id
+        }, ()=>{
+            console.log(`App.js: ${this.state.targetFlag}`)
         });
-        console.log(`App.js: ${this.state.targetFlag}`)
     }
 
 
