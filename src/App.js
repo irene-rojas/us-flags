@@ -22,24 +22,24 @@ class App extends Component {
         if (clickedState === this.state.selectedState) {
             this.setState({correct: this.state.correct + 1}, () => {
                 console.log("correct");
-                this.setTargetFlagApp();
+                this.getFlag();
             });
         };
         if (clickedState === !this.state.selectedState) {
             this.setState({wrong: this.state.wrong + 1}, () => {
                 console.log("wrong");
-                this.setTargetFlagApp();
+                this.getFlag();
             });
         }
     }
 
-    setTargetFlagApp = (targetFlag) => {
+    getFlag = (targetFlag) => {
         const targetState = targetFlag.id;
         this.setState({
             targetFlag: targetState
         });
         console.log(`App.js: ${this.state.targetFlag}`)
-      } 
+    }
 
 
   render() {
@@ -52,7 +52,7 @@ class App extends Component {
 
         <div className="flagsDiv">
             <Flags 
-                setTargetFlag={this.setTargetFlagApp}
+                sendFlag={this.getFlag}
             />
         </div>
 

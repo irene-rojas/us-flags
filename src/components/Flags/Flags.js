@@ -121,11 +121,11 @@ class Flags extends Component {
             // console.log(`Flags.js: ${targetFlag.name}`);
     }
 
-    sendTargetFlag = (targetFlag) => {
-        this.props.setTargetFlag(targetFlag);
-      }
+    sendFlag = (targetFlag) => {
+        this.props.sendFlag(targetFlag);
+    }  
 
-      
+
     render() {
         return (
 
@@ -133,7 +133,7 @@ class Flags extends Component {
             <img  
                 src={this.state.src} 
                 alt={this.state.id}
-                onLoad={this.sendTargetFlag}
+                onLoad={this.sendFlag}
             />
             <br></br>
             {this.state.name}
