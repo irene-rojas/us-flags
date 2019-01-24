@@ -134,6 +134,7 @@ class Flags extends Component {
                 src={this.state.src} 
                 alt={this.state.id}
                 onLoad={this.sendFlag}
+                id={this.state.id}
             />
             <br></br>
             {this.state.name}
