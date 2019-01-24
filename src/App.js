@@ -34,11 +34,10 @@ class App extends Component {
     }
 
     getFlag = (targetFlag) => {
-        const targetState = targetFlag.id;
         this.setState({
-            targetFlag: targetState
+            targetFlag: targetFlag.id
         });
-        console.log(`App.js: ${this.state.targetFlag}`)
+        console.log(`App.js: ${targetFlag}`)
     }
 
 
