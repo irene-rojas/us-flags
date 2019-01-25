@@ -64,13 +64,13 @@ class App extends Component {
             </div>
 
             <div className="correctDiv">
-                Correct: {this.state.correct}   
+                <strong>Correct: {this.state.correct}</strong>   
             </div>
             <div className="wrongDiv">
-                Wrong: {this.state.wrong}
+                <strong>Wrong: {this.state.wrong}</strong>
             </div>
             <div className="selectedDiv">
-                Selected State: {this.state.selectedState}
+                <strong>Selected State: {this.state.selectedState}</strong>
             </div>
         </div>
 
