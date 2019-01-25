@@ -35,6 +35,7 @@ class App extends Component {
         }
     }
 
+    // flag callback
     getFlag = (targetFlag) => {
         this.setState({
             targetFlag: targetFlag.target.id
@@ -52,6 +53,7 @@ class App extends Component {
             <h1>Match the Flag</h1>
         </div>
 
+        {/* key = new flag when this.state.correct updates */}
         <div className="flagsDiv">
             <Flags 
                 sendFlag={this.getFlag}

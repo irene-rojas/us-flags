@@ -118,7 +118,6 @@ class Flags extends Component {
                 src: targetFlag.src,
                 id: targetFlag.id
             });
-            // console.log(`Flags.js: ${targetFlag.name}`);
     }
 
     // flag callback
