@@ -21,14 +21,17 @@ class App extends Component {
         }); 
         // above correct 
         if (clickedState === this.state.selectedState) {
+            // let currentCorrect = this.state.correct;
             this.setState({
-                correct: this.state.correct + 1
-            });
+                totalTrue: this.state.selectedState + 1}, () => {
+                    console.log("hi");
+                });
         };
         // if (clickedState === !this.state.selectedState) {
+        //     let currentWrong = this.state.wrong;
+
         //     this.setState({
-        //         wrong: this.state.wrong + 1}, () => {
-        //         console.log("wrong");
+        //         wrong: currentWrong + 1
         //     });
         //     this.getFlag();
         // }
