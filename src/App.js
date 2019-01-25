@@ -15,26 +15,24 @@ class App extends Component {
 
     onClick = (event) => {
         event.preventDefault();
-        const clickedState = event.target.id;
+        let clickedState = event.target.id;
         this.setState({
             selectedState: clickedState
         }); 
         // above correct 
-        if (clickedState === this.state.selectedState) {
-            // let currentCorrect = this.state.correct;
+        const matchState = this.state.targetFlag;
+        if (clickedState === matchState) {
             this.setState({
-                totalTrue: this.state.selectedState + 1}, () => {
-                    console.log("hi");
-                });
-        };
-        // if (clickedState === !this.state.selectedState) {
-        //     let currentWrong = this.state.wrong;
+                correct: this.state.correct + 1
+            });
+            // this.getFlag();
+        }
+        if (clickedState === !matchState) {
+            this.setState({
+                wrong: this.state.wrong + 1
+            });
+        }
 
-        //     this.setState({
-        //         wrong: currentWrong + 1
-        //     });
-        //     this.getFlag();
-        // }
     }
 
     getFlag = (targetFlag) => {
