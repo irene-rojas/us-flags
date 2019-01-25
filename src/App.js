@@ -18,18 +18,20 @@ class App extends Component {
         let clickedState = event.target.id;
         this.setState({
             selectedState: clickedState
-        });  
-        if (clickedState === this.state.selectedState) {
-            this.setState({correct: this.state.correct + 1}, () => {
-                console.log("correct");
+        }); 
+        const matchState = this.state.targetFlag;
+        if (clickedState === matchState) {
+            this.setState({
+                correct: this.state.correct + 1,
+                selectedState: ""
             });
-            this.getFlag();
-        };
-        if (clickedState === !this.state.selectedState) {
-            this.setState({wrong: this.state.wrong + 1}, () => {
-                console.log("wrong");
+        }
+        else {
+        if (clickedState !== matchState) {
+            this.setState({
+                wrong: this.state.wrong + 1,
             });
-            this.getFlag();
+        }
         }
     }
 
@@ -53,6 +55,7 @@ class App extends Component {
         <div className="flagsDiv">
             <Flags 
                 sendFlag={this.getFlag}
+                key={this.state.correct}
             />
         </div>
 
@@ -66,8 +69,6 @@ class App extends Component {
             Correct: {this.state.correct}
             <br></br>
             Wrong: {this.state.wrong}
-            <br></br>
-            Target State: {this.state.targetFlag}
             <br></br>
             Selected State: {this.state.selectedState}
         </div>
