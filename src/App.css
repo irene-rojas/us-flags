@@ -18,6 +18,9 @@
     grid-column: 2/3;
     grid-row: 2/3;
     margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto)
 }
 
 .mapDiv {
@@ -27,9 +30,38 @@
     margin-top: 10px;
 }
 
-.scoreDiv {
+.correctDiv {
     grid-column: 1/2;
     grid-row: 2/3;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.wrongDiv {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: white;
+    box-shadow: 0 0 0 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.selectedDiv {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.flagImgDiv {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-bottom: 10px;
 }
 
 
