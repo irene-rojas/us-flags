@@ -19,20 +19,20 @@ class App extends Component {
         this.setState({
             selectedState: clickedState
         }); 
-        // above correct 
         const matchState = this.state.targetFlag;
         if (clickedState === matchState) {
             this.setState({
-                correct: this.state.correct + 1
+                correct: this.state.correct + 1,
+                selectedState: ""
             });
-            // this.getFlag();
         }
-        if (clickedState === !matchState) {
+        else {
+        if (clickedState !== matchState) {
             this.setState({
-                wrong: this.state.wrong + 1
+                wrong: this.state.wrong + 1,
             });
         }
-
+        }
     }
 
     getFlag = (targetFlag) => {
@@ -55,6 +55,7 @@ class App extends Component {
         <div className="flagsDiv">
             <Flags 
                 sendFlag={this.getFlag}
+                key={this.state.correct}
             />
         </div>
 
