@@ -55,10 +55,23 @@ class App extends Component {
 
         {/* key = new flag when this.state.correct updates */}
         <div className="flagsDiv">
-            <Flags 
-                sendFlag={this.getFlag}
-                key={this.state.correct}
+            
+            <div className="flagImgDiv">
+                <Flags 
+                    sendFlag={this.getFlag}
+                    key={this.state.correct}
             />
+            </div>
+
+            <div className="correctDiv">
+                <strong>Correct: {this.state.correct}</strong>   
+            </div>
+            <div className="wrongDiv">
+                <strong>Wrong: {this.state.wrong}</strong>
+            </div>
+            <div className="selectedDiv">
+                <strong>Selected State: {this.state.selectedState}</strong>
+            </div>
         </div>
 
         <div className="mapDiv">
@@ -67,13 +80,7 @@ class App extends Component {
             />
         </div>
 
-        <div className="scoreDiv">
-            Correct: {this.state.correct}
-            <br></br>
-            Wrong: {this.state.wrong}
-            <br></br>
-            Selected State: {this.state.selectedState}
-        </div>
+
 
       </div>
     );
