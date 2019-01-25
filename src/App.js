@@ -18,7 +18,8 @@ class App extends Component {
         let clickedState = event.target.id;
         this.setState({
             selectedState: clickedState
-        });  
+        }); 
+        // above correct 
         if (clickedState === this.state.selectedState) {
             this.setState({
                 correct: this.state.correct + 1
