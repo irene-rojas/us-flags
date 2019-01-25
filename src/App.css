@@ -36,16 +36,13 @@
     background-color: white;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
+    box-shadow: 0 8px 6px -6px black;}
 
 .wrongDiv {
     grid-column: 2/3;
     grid-row: 2/3;
     background-color: white;
-    box-shadow: 0 0 0 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .selectedDiv {
@@ -54,8 +51,7 @@
     background-color: white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .flagImgDiv {
