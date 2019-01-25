@@ -121,6 +121,7 @@ class Flags extends Component {
             // console.log(`Flags.js: ${targetFlag.name}`);
     }
 
+    // flag callback
     sendFlag = (targetFlag) => {
         this.props.sendFlag(targetFlag);
     }  
