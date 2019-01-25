@@ -70,8 +70,6 @@ class App extends Component {
             <br></br>
             Wrong: {this.state.wrong}
             <br></br>
-            Target State: {this.state.targetFlag}
-            <br></br>
             Selected State: {this.state.selectedState}
         </div>
 
