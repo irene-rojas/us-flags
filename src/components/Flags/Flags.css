@@ -1,9 +1,25 @@
 img {
-    width: 200px;
+    width: 175px;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 h3 {
     margin-top: 5px;
     margin-bottom: 0px;
+}
+#RI {
+    height: 125px;
+    width: 125px;
+}
+
+#ID {
+    height: 125px;
+}
+
+#ND {
+    width: 150px;
+}
+
+#CT {
+    height: 125px;
 }
