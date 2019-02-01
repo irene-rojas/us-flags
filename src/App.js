@@ -74,11 +74,11 @@ class App extends Component {
             </div>
         </div>
 
-        {/* <div className="mapDiv">
+        <div className="mapDiv">
             <SVGMap 
                 onClick={this.onClick}
             />
-        </div> */}
+        </div>
 
 
 
