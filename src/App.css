@@ -113,7 +113,7 @@ h1 {
           margin: 10px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 175px auto;
+          grid-template-rows: 0;
           box-shadow: 0 8px 6px -6px black;
       }
       
@@ -126,7 +126,7 @@ h1 {
       
       .correctDiv {
           grid-column: 1/2;
-          grid-row: 2/3;
+          grid-row: 1/2;
           background-color: white;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
