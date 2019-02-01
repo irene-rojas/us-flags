@@ -84,7 +84,7 @@ h1 {
 
 
 
-/* -------------------------- */
+/* --------------------------------------- */
 /* desktop */
 @media (min-width: 1025px) {
     .App {
@@ -94,7 +94,7 @@ h1 {
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 75px auto 1fr;
+        grid-template-rows: 75px 200px 1fr;
         /* grid-row-gap: 10px; */
       }
       
@@ -113,8 +113,9 @@ h1 {
           margin: 10px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 0;
+          grid-template-rows: 150px auto;
           box-shadow: 0 8px 6px -6px black;
+          height: 200px;
       }
       
       .mapDiv {
@@ -126,7 +127,7 @@ h1 {
       
       .correctDiv {
           grid-column: 1/2;
-          grid-row: 1/2;
+          grid-row: 2/3;
           background-color: white;
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
