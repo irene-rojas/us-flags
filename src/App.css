@@ -95,7 +95,7 @@ h1 {
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 75px 200px 1fr;
+        grid-template-rows: 75px auto 1fr;
         /* grid-row-gap: 10px; */
       }
       
@@ -114,9 +114,8 @@ h1 {
           margin: 10px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 150px auto;
+          grid-template-rows: 175px auto;
           box-shadow: 0 8px 6px -6px black;
-          height: 200px;
       }
       
       .mapDiv {
@@ -156,7 +155,7 @@ h1 {
           grid-row: 1/2;
           margin-bottom: 10px;
       }
-
+      
 }
 
 
