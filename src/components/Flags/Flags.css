@@ -1,28 +1,27 @@
-@media (max-width: 1024px) {
-    img {
-        width: 125px;
-        box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+img {
+    width: 125px;
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-    #RI {
-        height: 100px;
-        width: 100px;
-    }
-    
-    #ID {
-        height: 100px;
-    }
-    
-    #ND {
-        width: 100px;
-    }
-    
-    #CT {
-        height: 100px;
-    }
+#RI {
+    height: 100px;
+    width: 100px;
+}
+
+#ID {
+    height: 100px;
+}
+
+#ND {
+    width: 100px;
+}
+
+#CT {
+    height: 100px;
 }
 
 
+@media (min-width: 1025px) {
 img {
     width: 175px;
     box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -48,4 +47,6 @@ h3 {
 
 #CT {
     height: 125px;
+}
+
 }
