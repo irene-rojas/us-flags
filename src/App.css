@@ -1,21 +1,23 @@
+@media (max-width: 1024px) {
 .App {
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 75px auto 1fr;
-  /* grid-row-gap: 10px; */
-}
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px auto 1fr;
+    /* grid-row-gap: 10px; */
+  }
 
-.header {
+  .header {
     grid-column: 2/3;
     grid-row: 1/2;
 }
 
 h1 {
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .flagsDiv {
@@ -23,25 +25,21 @@ h1 {
     grid-row: 2/3;
     margin: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 175px auto;
-    box-shadow: 0 8px 6px -6px black;
-}
-
-.mapDiv {
-    width: 800px;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 125px;
 }
 
 .correctDiv {
-    grid-column: 1/2;
-    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-row: 1/2;
     background-color: white;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
     opacity: 0.7;
+    height: 25px;
+    width: 125px;
+    justify-self: left;
+    border-radius: 10px;
+    padding-top: 3px;
 }
 
 .wrongDiv {
@@ -49,21 +47,115 @@ h1 {
     grid-row: 2/3;
     background-color: white;
     opacity: 0.7;
+    height: 25px;
+    width: 125px;
+    justify-self: left;
+    border-radius: 10px;
+    padding-top: 3px;
 }
 
 .selectedDiv {
-    grid-column: 3/4;
-    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-row: 3/4;
     background-color: white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     opacity: 0.7;
+    height: 25px;
+    width: 180px;
+    justify-self: left;
+    border-radius: 10px;
+    padding-top: 3px;
 }
 
 .flagImgDiv {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-row: 1/span 2;
     margin-bottom: 10px;
+    justify-self: right;
+    margin-right: 10px
+}
+
+.mapDiv {
+    width: 775px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 10px;
+}
+}
+
+
+/* --------------------------------------- */
+/* desktop */
+@media (min-width: 1025px) {
+    .App {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 75px auto 1fr;
+        /* grid-row-gap: 10px; */
+      }
+      
+      .header {
+          grid-column: 2/3;
+          grid-row: 1/2;
+      }
+      
+      h1 {
+          margin-bottom: 10px;
+      }
+      
+      .flagsDiv {
+          grid-column: 2/3;
+          grid-row: 2/3;
+          margin: 10px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 175px auto;
+          box-shadow: 0 8px 6px -6px black;
+      }
+      
+      .mapDiv {
+          width: 800px;
+          grid-column: 2/3;
+          grid-row: 3/4;
+          margin-top: 10px;
+      }
+      
+      .correctDiv {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          background-color: white;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          opacity: 0.7;
+      }
+      
+      .wrongDiv {
+          grid-column: 2/3;
+          grid-row: 2/3;
+          background-color: white;
+          opacity: 0.7;
+      }
+      
+      .selectedDiv {
+          grid-column: 3/4;
+          grid-row: 2/3;
+          background-color: white;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+          opacity: 0.7;
+      }
+      
+      .flagImgDiv {
+          grid-column: 2/3;
+          grid-row: 1/2;
+          margin-bottom: 10px;
+      }
+      
 }
 
 
