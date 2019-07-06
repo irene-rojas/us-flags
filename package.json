@@ -5,6 +5,7 @@
   "homepage": "http://irene-rojas.github.io/us-flags",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "handlebars": "^4.1.0",
     "react": "^16.7.0",
     "react-clickdrag": "^4.0.0",
     "react-dom": "^16.7.0",
