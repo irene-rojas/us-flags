@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://irene-rojas.github.io/us-flags",
   "dependencies": {
+    "eslint-utils": "^1.4.1",
     "gh-pages": "^2.0.1",
     "handlebars": "^4.1.0",
     "js-yaml": "^3.13.1",
